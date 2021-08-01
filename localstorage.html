@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        let imparray=['mangoes','banana','apple'];
+        localStorage.setItem('name','armann');
+        localStorage.setItem('name1','armann...');
+        //localStorage.clear();
+        let a=localStorage.getItem('name1');
+        //console.log(typeof(a));
+        //console.log(a);
+       // localStorage.removeItem('name');
+       //to convert imparray into string with the help of json 
+       localStorage.setItem('fruits',JSON.stringify(imparray));
+       //convert it into array with the help of json.parse
+       a=JSON.parse(localStorage.getItem('fruits'));
+       console.log(a);
+
+        </script>
+
+</body>
+</html>

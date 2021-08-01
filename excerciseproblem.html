@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise problem</title>
+</head>
+<body>
+    <div id="new">
+        <p id="one">this the heading</p>
+    </div>
+    <script>
+       document.querySelector('#one').addEventListener('click',function fun(e) {
+        
+var element = document.createElement("input");
+
+
+var label = document.createElement("Label");
+label.innerHTML = "New Label";     
+
+//Assign different attributes to the element.
+element.setAttribute("type", "text");
+
+element.setAttribute("style", "width:200px");
+
+label.setAttribute("style", "font-weight:normal");
+
+// 'foobar' is the div id, where new fields are to be added
+var foo = document.getElementById("new");
+
+//Append the element in page (in span).
+foo.appendChild(label);
+foo.appendChild(element);
+let k=document.getElementsByName('element')
+console.log(k);
+  localStorage.setItem('name',k);
+
+           
+       })
+            
+    </script>
+</body>
+</html>

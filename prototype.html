@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype in javascript</title>
+</head>
+
+<body>
+<p>hello</p>
+<script>
+//this is the function mobile in which properties like modelno and price are initialized using samsumg object .
+    function mobile(model_no) {
+        this.model=model_no;//these both are instant member.
+        this.price=3000;//these both are instant member.
+
+        
+    }
+//new keyword is used for creating new object with the help of constructor.
+    let samsung=new mobile('samsung');
+  let nokia=new mobile('nokia');
+  console.log(samsung);
+  console.log(nokia);
+  //new property is define using samsung  object but this property will be present in samsung only .
+  samsung.color='white'  ;
+ 
+  //in order to define a property for class we have to write 'class_name.prototyekeyword.key='value'';
+ //this is prototype member.
+ mobile.prototype.color='yellow';
+</script>   
+</body>
+</html>
