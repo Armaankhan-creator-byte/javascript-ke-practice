@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+</head>
+<body>
+    <h1>
+        hello
+    </h1>
+    <ul id="students">
+    
+    </ul>
+</body>
+<script>
+    /*function show(a){
+        console.log("i am show function",a);
+
+
+    }
+    function geeky(a,callback)
+
+    {
+        //var a=101;
+       // callback(a);
+       callback(a);
+
+    }
+    geeky(10,show);
+    console.log("function ends");*/
+    //or
+    /*function geeky(callback)
+
+    {
+        console.log("i am geeky function");
+    
+       callback();
+
+    }
+    geeky(function show(){
+        console.log("i am show function");
+
+
+    });*/
+//or
+/*function geeky(callback)
+
+    {
+        console.log("i am geeky function");
+    
+       callback();
+
+    }
+    geeky(function (){
+        console.log("i am show function");
+
+
+    })*/
+    //or
+    /*function geeky(callback)
+
+    {
+        console.log("i am geeky function");
+    
+       callback();
+
+    }
+    geeky(a=>console.log("i am show function"));
+    console.log("programs ends");
+    */
+//all the above call back functions are sychronous function.
+//while settimeout is asychronous function.
+/*setTimeout(function show(){
+    
+    console.log("i am show function",a);
+
+},3000);
+
+console.log("2nd program is ending");*/
+
+const students=
+[{name:"armaan",subject:"javascript"},
+{name:"farmaan", subject:"python"}];
+
+function enrolledstudent(student ,callback){
+    setTimeout(function(){
+        students.push(student);
+        console.log("student has been enrolled ");
+      
+        callback();
+
+    },8000);
+  
+}
+     function getstudents() {
+         setTimeout (function(){
+             let str="";
+             students.forEach(function(student){
+                 str+=`<li>${student.subject}</li>`
+
+             })
+             document.getElementById('students').innerHTML=str;
+             console.log("students have been feteched");
+
+         },1000);
+        }
+        let newstudent={name:"sunny",subject:"c++"}
+   enrolledstudent(newstudent,getstudents);
+         
+     
+
+     
+        
+
+    
+
+</script>
+</html>
