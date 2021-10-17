@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <h1>arrow function</h1>
+</body>
+<script>
+    //normal function 
+    /*function fun1(){
+        console.log("hello fun1");
+    }*/
+   // fun1();
+   //another way of defining function.
+    /*fun1=function(){
+        console.log("hello func1");
+    }
+    fun1();*/
+    /*let fun1=function(){
+        console.log("hey this is harry");
+
+    }
+    fun1();*/
+    //arrow function where you dont have to write the function keyword.and include => in the function.
+    /*let fun1=()=>{
+        console.log("hey this is harry");
+
+    }
+    fun1();*/
+    //arrow function returning some text
+    /*let greet=()=>{
+        return "good morning";
+    }
+    console.log(greet());*/
+    //you dont require braces and return keyword for one line code
+   /* let greet=()=> "good morning";
+    
+    console.log(greet());*/
+
+    //you require () bracket in arrow function for defining object. 
+    /*let greet=()=>({name:"armaan"})
+    console.log(greet());*/
+    //let greet=(name)=>{return "good morning "+name}
+    //console.log(greet("armaan"));
+    //when function is taking one parameter so no need of paratheses means ().
+let greet = name => "good morning "+name
+    console.log(greet("armaan"));
+    //when function is taking two parameter then we have to apply  parathesis.
+    /*let greet=(name,feeling)=> "good morning "+name +feeling
+    console.log(greet("armaan","bye"));*/
+
+</script>
+</html>
