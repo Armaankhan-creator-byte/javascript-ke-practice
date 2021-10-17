@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>word api</h1>
+    <button type="button" class="btn btn-info" id="btn">click on me to get the result</button>
+    <ul id="le"></ul>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script >
+      let myjson=`{
+  "word": "example",
+  "results": [
+    {
+      "definition": "a representative form or pattern",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "model"
+      ],
+      "typeOf": [
+        "representation",
+        "internal representation",
+        "mental representation"
+      ],
+      "hasTypes": [
+        "prefiguration",
+        "archetype",
+        "epitome",
+        "guide",
+        "holotype",
+        "image",
+        "loadstar",
+        "lodestar",
+        "microcosm",
+        "original",
+        "paradigm",
+        "pilot",
+        "prototype",
+        "template",
+        "templet",
+        "type specimen"
+      ],
+      "derivation": [
+        "exemplify"
+      ],
+      "examples": [
+        "I profited from his example"
+      ]
+    },
+    {
+      "definition": "something to be imitated",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "exemplar",
+        "good example",
+        "model"
+      ],
+      "typeOf": [
+        "ideal"
+      ],
+      "hasTypes": [
+        "pacemaker",
+        "pattern",
+        "beauty",
+        "prodigy",
+        "beaut",
+        "pacesetter"
+      ],
+      "derivation": [
+        "exemplify",
+        "exemplary"
+      ]
+    },
+    {
+      "definition": "an occurrence of something",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "case",
+        "instance"
+      ],
+      "typeOf": [
+        "happening",
+        "natural event",
+        "occurrence",
+        "occurrent"
+      ],
+      "hasTypes": [
+        "clip",
+        "mortification",
+        "piece",
+        "time",
+        "humiliation",
+        "bit"
+      ],
+      "derivation": [
+        "exemplify"
+      ],
+      "examples": [
+        "but there is always the famous example of the Smiths"
+      ]
+    },
+    {
+      "definition": "an item of information that is typical of a class or group",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "illustration",
+        "instance",
+        "representative"
+      ],
+      "typeOf": [
+        "information"
+      ],
+      "hasTypes": [
+        "excuse",
+        "apology",
+        "specimen",
+        "case in point",
+        "sample",
+        "exception",
+        "quintessence",
+        "precedent"
+      ],
+      "derivation": [
+        "exemplify",
+        "exemplary"
+      ],
+      "examples": [
+        "this patient provides a typical example of the syndrome",
+        "there is an example on page 10"
+      ]
+    },
+    {
+      "definition": "punishment intended as a warning to others",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "deterrent example",
+        "lesson",
+        "object lesson"
+      ],
+      "typeOf": [
+        "monition",
+        "admonition",
+        "word of advice",
+        "warning"
+      ],
+      "derivation": [
+        "exemplary"
+      ],
+      "examples": [
+        "they decided to make an example of him"
+      ]
+    },
+    {
+      "definition": "a task performed or problem solved in order to develop skill or understanding",
+      "partOfSpeech": "noun",
+      "synonyms": [
+        "exercise"
+      ],
+      "typeOf": [
+        "lesson"
+      ],
+      "examples": [
+        "you must work the examples at the end of each chapter in the textbook"
+      ]
+    }
+  ],
+  "syllables": {
+    "count": 3,
+    "list": [
+      "ex",
+      "am",
+      "ple"
+    ]
+  },
+  "pronunciation": {
+    "all": "ɪɡ'zæmpəl"
+  },
+  "frequency": 4.67
+}
+     `
+     let k=JSON.parse(myjson); 
+      let btn=document.getElementById('btn');
+      btn.addEventListener('click',fun());
+      
+      function fun(){
+        let html="";
+        let result=k['results'];
+
+      result.forEach(element => {
+          html+=`<div class="alert alert-primary" role="alert">
+ ${element.definition}
+</div>`
+      });
+      let le=document.getElementById('le');
+      le.innerHTML=html;
+    
+      
+      }
+  </script>
+</body>
+</html>
