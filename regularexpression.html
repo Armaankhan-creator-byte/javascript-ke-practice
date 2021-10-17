@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object constructor
+
+    </title>
+</head>
+
+<body>
+    <h1>
+        regular expressions in JavaScript
+    </h1>
+  
+</body>
+<script>
+    let reg=/harry/;
+    //let reg=/harry/i;//i means case insensitive.
+    //let reg=/harry/g;//g means global flage.
+    console.log(reg);
+    console.log(reg.source);
+    let s="this is code with harry and haRry bhai";
+    let results=reg.exec(s);
+    //this will give index of first harry
+    console.log(results);
+ //results=reg.exec(s);
+ //this will index of second harry
+    //console.log(results);
+    //results=reg.exec(s);
+    //this will give null.
+   // console.log(results);
+   // 2.test() function. this function returns true for match and false for  unmatch.
+   results=reg.test(s);
+   console.log(results);
+   //3 . match() this is function will return an array for match if the reg is global and return null for no match.
+   // and its syntax is opposite to other function as it is applied to s string not on reg.
+   resultss=s.match(reg);
+   console.log(resultss);
+   //4. search() this function returns index of first match else it returns -1
+   let result4=s.search(reg);
+   console.log(result4);
+   //5. replace() this function returns new replaced string with all the replacement .if reg is golbal then it replaced
+   // all the match string else it replace only first match.
+   let results5=s.replace(reg,'armaan');
+   console.log(results5);
+</script>
+</html>

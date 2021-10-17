@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>character set in regular expressions</title>
+</head>
+<body>
+    <h1>character set of regular expression</h1>
+</body>
+<script>
+    //let rex=/har[a-z]y/;
+    //[] means any one charcter with in hte bracket can match the string so its a match.
+    //rex=/ha[a-z][r,a,z]y/;
+    //[^] means no any  charcters in the bracket should match the string then its a match.
+//    let rex=/h[^ayu]rr[uy]/;
+   //rex=/h[^ayu]rr[A-Z][0-9[0-9]/
+   //quantifiers in regular expression.
+   //{} we use this bracket for quantifier.
+
+  let rex=/hir{2}[a-z]/ //r can occur exactly 2 times.
+  rex=/hir{0,2}r{1}[a-z]/;//{0,2} r can occur 0 tie, 1 time ,2 time and {1} r can occur exactly  1 time.
+  // grouping in regular expression. we use () paranteses for grouping.
+  rex=/(har){2}y/;
+  rex=/(har){2}([0-9]y){3}/;
+    let s="hirry bhai";
+    s="harhary bhai";
+    s="harhar1y4y9y bhai"
+    let result=rex.exec(s);
+    console.log(result);
+    if(rex.test(s)){
+        console.log(rex.test(s))
+    
+console.log(`the rex${s} matches the${rex.source}`)
+    }
+    else {
+        console.log(`the rex ${s}  doesnot match the ${rex.source}`)
+    }
+</script>
+</html>

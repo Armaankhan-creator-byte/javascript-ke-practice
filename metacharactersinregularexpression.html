@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>meta characters in regular expressions in javascript</h1> 
+
+</body>
+<script>
+    //let rex=/armaan/;
+    // ^this is carit symbol means the string should starts with the rex completely.
+    //rex=/^armaan/;
+     let rex=/aan$/;
+   
+    //  $ this the doolar symbol means the string must end with the rex completely no space no other word.
+    rex=/ar.m/;
+    //. means it matches the exactly one character only and all the characters of the rex should match the string.
+rex=/ar*ma/;
+// * means it  matches the zero ,one or more  characters  .
+rex=/ar?m?maan/;
+// ? means the charcter before the ? is optional if it is present in the string then it is ok other wise also it is ok.
+rex=/arm\.aan/;   
+// \. or \ and any charcter means the that particular charcter should match the string completely means that character
+//  must be present in the string.
+let s="arm.aan";
+    let result=rex.exec(s);
+    console.log(result);
+    if(rex.test(s)){
+//console.log(rex.test(s))
+    
+console.log(`the rex${s} matches the${rex.source}`)
+    }
+    else {
+        console.log(`the rex ${s}  doesnot match the ${rex.source}`)
+    }
+</script>
+</html>
