@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>promises in javascript</h1>
+
+</body>
+<script>
+    const promiseobj=new Promise((resolve,reject)=>{
+       
+       /* this is one code
+       let req=true;
+        if(req==true){
+            
+            resolve("request sucess"+(a+b));
+            
+        }
+        else{
+            reject("request rejected");
+        }
+
+    }).then((value)=>{console.log(value);},(error)=>{console.log(error);})
+    .finally(k=>{console.log("hello users");}) one code*/
+    /*this is second code
+    let a=10;
+    resolve(a)
+    }).then(
+        (value)=>{console.log(value);
+        return value+10;}
+    
+    ).then((value)=>{
+        console.log(value);}
+
+    )*/
+let req=false;
+if(req==true){
+    resolve("request sucess");
+            
+        }
+        else{
+            reject("request rejected");
+        }
+}
+    ).then((value)=>{
+        console.log(value);
+    }).then((error)=>{console.log(error,"then")})
+    .catch((error)=>{console.log(error,"catch")}
+
+
+    )
+    .finally((k)=>{console.log("cleaned up")})
+    
+</script>
+</html>
